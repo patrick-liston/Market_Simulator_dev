@@ -17,6 +17,7 @@ from Main_Simulator.Simulator import *
 from Analysis.Results_and_Analysis import *
 from utils.utils import *
 import os
+from collections import deque
 
 
 ##################################
@@ -74,11 +75,11 @@ wake_up_instances= combine_agent_wake_times(all_wake_times)
 
 ### SET INITIAL MARKET CONDITIONS ####
 if use_historical_prices:
-    transactions=historical_price(historical_prices)
+    transactions=deque(historical_price(historical_prices))
     current_price=transactions[-1][-1]
     print(transactions)
 else:
-    transactions=[]
+    transactions=deque()
     current_price=current_price
 ##
 
