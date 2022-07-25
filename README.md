@@ -16,6 +16,11 @@ NOTE: For agent generation changes, you may need to scroll down a litter further
 This is also true for results analysis and plotting.
 
 
+Example Output
+============================
+
+### Output from previous Simulation (LOB)
+![alt text](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Agent_Change_Direction.png)
 
 
 
@@ -38,6 +43,8 @@ Folder Structure
     ├── Main_Simulator                  # Main functions for running the market simulation 
     │   ├── Simulator.py         		# Functions to run main simulation. Market Order only
     │   └── Simulator_LOB.py         	# Functions to run main simulation. For Limit Orders
+    ├── Sample Images                   # Images of Previous SImulation - to provide samples 
+    │   └── ....         				# Various images
     ├── utils                   		# Some helper functions.
     │   └── utils.py         			# Functions to help. i.e Get current path, Converting times, create historical prices
     └── README.md
@@ -70,10 +77,13 @@ flowchart TD
     
     B--> C[Determine which strategy the agent uses];
 
-    C --> E[Generate trade details i.eqty, direction, price  values];
+    C --> E[Generate trade details i.e qty, direction, price  values];
 
     E --> F[Place trade into LOB];
 
     F--> A;
  
 ```
+
+
+
