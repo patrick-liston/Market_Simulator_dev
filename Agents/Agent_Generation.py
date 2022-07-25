@@ -1,3 +1,11 @@
+''' Functions to generate agent information,
+This information is then placed in a list of lists for the simulation torefer back to later.
+
+The general setup of a particular agent row is
+[agent_id, param_1, wake_frequencys, agent_type]
+'''
+
+
 from random import randrange
 import random
 import numpy as np
@@ -5,15 +13,6 @@ import numpy as np
 
 
 
-''' Generating wake times for agents '''
-def generate_wake_times_quick(agent_id, trade_freq, sim_time,rng):
-    wake_times=[]; current_time=0
-    while current_time<=sim_time:
-        wake_interval=int(rng.chisquare(trade_freq))
-        if wake_interval>0:
-            wake_times.append(current_time+wake_interval)
-            current_time+=wake_interval
-    return agent_id, wake_times
 
 ''' Generating Agents that will Trade '''
 def generate_agent_info(num_agents,agent_info, min_freq, max_freq, linear=False):
@@ -40,3 +39,8 @@ def generate_agent_info_mean(num_agents,agent_info, min_freq, max_freq, linear=F
         agent_info.append([agent+previous_agent_length,trend_period[agent],wake_freqs[agent],'Mean']) #Agent_id, mean_period_length, Wake_Frequency, Agent_type
     return agent_info
 
+def generate_agent_info_spike(num_agents,agent_info, spike_times=[], spike_size=0.5):
+    previous_agent_length=len(agent_info)
+    for agent in range(num_agents):
+        agent_info.append([agent+previous_agent_length,spike_size,spike_times,'Spike']) #Agent_id, Starting_Balance, Wake_Frequency
+    return agent_info

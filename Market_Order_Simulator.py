@@ -79,7 +79,7 @@ if use_historical_prices:
     current_price=transactions[-1][-1]
     print(transactions)
 else:
-    transactions=deque()
+    transactions=deque([])
     current_price=current_price
 ##
 

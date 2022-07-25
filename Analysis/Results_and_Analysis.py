@@ -38,6 +38,13 @@ def plot_simple(transaction_df, show_plot=False):
     if show_plot:
         plt.show()
 
+def plot_simple_human_time(transaction_df, show_plot=False): 
+    transaction_df.plot(x='Human_Time', y='price', title='Price - Limit Orders - Size of Trade Porotional to trading Frequency')
+    plt.xlabel('Time')
+    plt.ylabel('Price')
+    if show_plot:
+        plt.show()
+
 
 
 def save_data(data, path, file_name, file_type='.csv'):
@@ -90,6 +97,23 @@ def plot_candles(candle_data, show_plot=False):
 
     
 
+
+'''Main function for transformaing raw transaction data into a useable dataframe, 
+it merges the agent information with trasnactions, as well as computing the "human time" of any trades.
+This will be the main dataframe for later analyses'''
+def summarise_results_LOB(transactions, agent_info):
+    #Create df of all transactions
+    transaction_df=pd.DataFrame(transactions, columns=['buyer_id', 'seller_id', 'amount', 'currency', 'price', 'buy_sell', 'prev_trade_time_placed', 'executed_time'])
+    transaction_df['Human_Time']=[convert_to_human_time(time, current_milli_time()) for time in transaction_df['executed_time']]
+
+    #merge agent infor with transactions to create cleaner df
+    transaction_df['agent']=transaction_df['buyer_id'] #NOT EFFICIENT - But works for now
+    agent_info_df=pd.DataFrame(agent_info,columns=['agent_id','normal','wake_freq','type'])
+    final_df= pd.merge(transaction_df, agent_info_df, left_on=  ['agent'],right_on= ['agent_id'],how = 'left')
+    final_df= final_df[['buyer_id','seller_id','amount','price','type','Human_Time']]
+    #final_df['previous_price']=final_df['price']-final_df['amount']
+
+    return transaction_df, final_df 
 
 
 
