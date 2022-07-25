@@ -68,15 +68,15 @@ Detailed Simulation Functions
 
 ```mermaid
 stateDiagram
-    [*] --> Check if any agents should be woken
-    Check if any agents should be woken --> |No agents woken| [*]
+    [*] --> [Check if any agents should be woken]
+    [Check if any agents should be woken] --> |No agents woken| [*]
     
-    Check if any agents should be woken --> Determine which strategy the agent uses
+    [Check if any agents should be woken] --> [Determine which strategy the agent uses]
 
-    Determine which strategy the agent uses --> Generate qty, direction, price  values
+    [Determine which strategy the agent uses] --> [Generate qty, direction, price  values]
 
-    Generate qty, direction, price  values --> Place trade into LOB
+    [Generate qty, direction, price  values] --> [Place trade into LOB]
 
-    Place trade into LOB-->[*]
+    [Place trade into LOB]-->[*]
  
 ```
