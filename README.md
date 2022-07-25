@@ -77,6 +77,6 @@ flowchart TD
 
     E --> F[Place trade into LOB];
 
-    F-> A;
+    F--> A;
  
 ```
