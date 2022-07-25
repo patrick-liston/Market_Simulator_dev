@@ -25,16 +25,16 @@ The simulator is an Agent Based Discrete Event Simulator, in which a set a of ag
 	2. Trend Following Agent - Determine if the nth previous trade is larger or smaller than the current price. Trade accordingly. i.e Sell if the current price is smaller than the previous. 
 	3. Mean Reverting Agent - Calculate the mean of the last n trades then trade accordingly. i.e Sell if the current price is larger than the mean of the last n trades.
 
-## MARKET ORDER SIMULATOR
+### MARKET ORDER SIMULATOR
 This simulator only considers market orders. It assumes a very thing orderbook, where each quantity or unit, causes the price to move 1 price increment. i.e  +3 Amont = +3 Price.
 This is not hugely realistic, however we can see that some typical market patterns emerge. 
 
 
-## LIMIT ORDER SIMULATOR
+### LIMIT ORDER SIMULATOR
 This version of the simulator uses a Limit Order Book (LOB) to track and execute trades. (Based on an altered version of https://github.com/kmanley/orderbook). I reccomend using this version. 
 
 
-## Sample Output
+### Sample Output
 Example Market Orders Only             |  Example Market Orders Only
 :-------------------------:|:-------------------------:
 ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
