@@ -58,10 +58,10 @@ D[Main Simulation] -->  E[Output Results] -->  F[Analyse results]
 ```
 
 
-Detailed Simulation Functions  
+Detailed Main Simulation 
 ============================
 
-### Detailed Simulation Flow
+### Detailed Main Simulation Flow
 
 ```mermaid
 flowchart TD
