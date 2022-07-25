@@ -6,7 +6,7 @@ This is a repo for the development of a market simulator.
 Running the Simulator
 ============================
 # To run
-1. Nagvigate to the directory to which you cloned this repo. And ensure '''Market_Order_Simulator.py''' or '''Limit_Order_Simulator.py''' is present.
+1. Nagvigate to the directory to which you cloned this repo. And ensure **Market_Order_Simulator.py** or ***Limit_Order_Simulator.py*** is present.
 2. Execute the command: '''python3 Market_Order_Simulator.py''' or '''python3 Limit_Order_Simulator.py'''
 
 # To edit parameters:
