@@ -68,10 +68,10 @@ Detailed Simulation Functions
 
 ```mermaid
 flowchart TD
-    A[*] --> B [Check if any agents should be woken]
-    B [Check if any agents should be woken] -- |No agents woken| --> A[*]
+    A[*] --> B[Check if any agents should be woken]
+    B -- |No agents woken| --> A[*]
     
-    B [Check if any agents should be woken] --> C [Determine which strategy the agent uses]
+    B--> C [Determine which strategy the agent uses]
 
     C [Determine which strategy the agent uses] --> E [Generate qty, direction, price  values]
 
