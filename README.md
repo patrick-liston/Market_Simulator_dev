@@ -52,7 +52,7 @@ Flow of Process for Simulation
 
 ```mermaid
 graph LR
-A[User Input (params)] -->B(Generate Agent info) --> C(Generate Wake time for agents)
+A[User Input params] -->B(Generate Agent info) --> C(Generate Wake time for agents)
 D[Main Simulation] -->  E[Output Results] -->  F[Analyse results]
 
 ```
@@ -70,7 +70,7 @@ flowchart TD
     
     B--> C[Determine which strategy the agent uses];
 
-    C --> E[Generate trade details (qty, direction, price  values)];
+    C --> E[Generate trade details i.eqty, direction, price  values];
 
     E --> F[Place trade into LOB];
 
