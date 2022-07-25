@@ -1,5 +1,21 @@
 # Market Simulator dev
-This is a repo for the development of my market simulator
+This is a repo for the development of a market simulator.
+
+
+
+Running the Simulator
+============================
+# To run
+1. Nagvigate to the directory to which you cloned this repo. And ensure '''Market_Order_Simulator.py''' or '''Limit_Order_Simulator.py''' is present.
+2. Execute the command: '''python3 Market_Order_Simulator.py''' or '''python3 Limit_Order_Simulator.py'''
+
+# To edit parameters:
+Edit the '''Market_Order_Simulator.py''' or '''Limit_Order_Simulator.py''' file.
+All main parameters are contained at the start of this script - with appropriate descptors of what they do.
+NOTE: Simulation time is measuresd in milliseconds. i.e 1000*60 is 1 Minute
+
+NOTE: For agent generation changes, you may need to scroll down a litter further
+This is also true for results analysis and plotting.
 
 
 # How this simulator works
@@ -13,31 +29,28 @@ The simulator is an Agent Based Discrete Event Simulator, in which a set a of ag
 This simulator only considers market orders. It assumes a very thing orderbook, where each quantity or unit, causes the price to move 1 price increment. i.e  +3 Amont = +3 Price.
 This is not hugely realistic, however we can see that some typical market patterns emerge. 
 
-Solarized dark             |  Solarized Ocean
+
+## LIMIT ORDER SIMULATOR
+This version of the simulator uses a Limit Order Book (LOB) to track and execute trades. (Based on an altered version of https://github.com/kmanley/orderbook). I reccomend using this version. 
+
+
+## Sample Output
+Example Market Orders Only             |  Example Market Orders Only
 :-------------------------:|:-------------------------:
 ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
 
-Solarized dark             |  Solarized Ocean
+Example Limit Orders             |  Example Limit Orders
+:-------------------------:|:-------------------------:
+![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
+
+Spike Agents - Varied             |  Spike Agents Create Resistence
 :-------------------------:|:-------------------------:
 ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
 
 
 
-# Agent Types
 
 
-
-# To run
-1. Nagvigate to the directory to which you cloned this repo. And ensure "Market_Order_Simulator.py" is present.
-2. python3 Market_Order_Simulator.py
-
-# To edit parameters:
-Edit the "Market_Order_Simulator.py" file.
-All main parameters are contained at the start of this script - with appropriate descptors of what they do.
-NOTE: Simulation time is measuresd in milliseconds. i.e 1000*60 is 1 Minute
-
-NOTE: For agent generation changes, you may need to scroll down a litter further
-This is also true for results analysis and plotting.
 
 
 Example Output
