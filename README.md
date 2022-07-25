@@ -34,6 +34,16 @@ This is not hugely realistic, however we can see that some typical market patter
 This version of the simulator uses a Limit Order Book (LOB) to track and execute trades. (Based on an altered version of https://github.com/kmanley/orderbook). I reccomend using this version. 
 
 
+
+
+
+
+
+
+
+Example Output
+============================
+
 ### Sample Output
 Example Market Orders Only             |  Example Market Orders Only
 :-------------------------:|:-------------------------:
@@ -49,13 +59,6 @@ Spike Agents - Varied             |  Spike Agents Create Resistence
 
 
 
-
-
-
-
-Example Output
-============================
-
 ### Output from previous Simulation (LOB)
 The below image shows the volume being traded by each agent type at a given time. 
 We are able to observe that when the agent type "mean" and "trend" cross over we see a "flat" point within the price. And when they "switch" prominence we see a reversal in price. (This reversal does not occur in all instances - other trials have shown that it may continue in the same direction, however it always alters the gradient of the curve, and a "flat" patch occurs in all cases. )
@@ -69,7 +72,7 @@ Folder Structure
 ### Directory layout
 
     .
-    ├── Market_Order_Simulator.py       # Main script to run Market Order (only) Simulator ^^
+    ├── Market_Order_Simulator.py       # Main script to run Market Order (only) Simulator
     ├── Limit_Order_Simulator.py        # Main script to run Limit Order Simulator 
     ├── Agents                     		# Folder containing scripts for agent related functions 
     │   ├── Agent_Generation.py         # Functions to generate agent types
