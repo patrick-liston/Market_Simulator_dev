@@ -47,22 +47,22 @@ Example Output
 ### Sample Output
 Example Market Orders Only             |  Example Market Orders Only
 :-------------------------:|:-------------------------:
-![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
+![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/Market_Order_Simulation.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/Market_Order_Simulation_chi.png)
 
 Example Limit Orders             |  Example Limit Orders
 :-------------------------:|:-------------------------:
-![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
+![](hhttps://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/LOB_Example_Price.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/LOB_Example_Price_Down.png)
 
 Spike Agents - Varied             |  Spike Agents Create Resistence
 :-------------------------:|:-------------------------:
-![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Market_Order_Simulation_chi_2.png)
+![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/Various_spikes.png)  |  ![](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/Spike_Resistance.png)
 
 
 
 ### Output from previous Simulation (LOB)
 The below image shows the volume being traded by each agent type at a given time. 
 We are able to observe that when the agent type "mean" and "trend" cross over we see a "flat" point within the price. And when they "switch" prominence we see a reversal in price. (This reversal does not occur in all instances - other trials have shown that it may continue in the same direction, however it always alters the gradient of the curve, and a "flat" patch occurs in all cases. )
-![alt text](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Agent_Change_Direction.png)
+![alt text](https://github.com/patrick-liston/Market_Simulator_dev/blob/main/Sample_Images/Agent_Change_Direction.png)
 
 
 
