@@ -6,11 +6,11 @@ This is a repo for the development of a market simulator.
 Running the Simulator
 ============================
 # To run
-1. Nagvigate to the directory to which you cloned this repo. And ensure **Market_Order_Simulator.py** or ***Limit_Order_Simulator.py*** is present.
-2. Execute the command: '''python3 Market_Order_Simulator.py''' or '''python3 Limit_Order_Simulator.py'''
+1. Nagvigate to the directory to which you cloned this repo. And ensure ***Market_Order_Simulator.py*** or ***Limit_Order_Simulator.py*** is present.
+2. Execute the command: ***python3 Market_Order_Simulator.py*** or ***python3 Limit_Order_Simulator.py***
 
 # To edit parameters:
-Edit the '''Market_Order_Simulator.py''' or '''Limit_Order_Simulator.py''' file.
+Edit the ***Market_Order_Simulator.py*** or ***Limit_Order_Simulator.py*** file.
 All main parameters are contained at the start of this script - with appropriate descptors of what they do.
 NOTE: Simulation time is measuresd in milliseconds. i.e 1000*60 is 1 Minute
 
@@ -21,8 +21,7 @@ This is also true for results analysis and plotting.
 # How this simulator works
 The simulator is an Agent Based Discrete Event Simulator, in which a set a of agent (of various types) are generated and woken with varying frequencies.
 ### Agent types: 
-	1. Random Agent - Randomly generates a price and quantity. These values are calculated using a normal distribution, where trade sizes and prices are sized according to trade frequency. 
-	i.e An agent that trades frequently will have smaller trade sizes and prices closer to the current price than those that trade less frequently.
+	1. Random Agent - Randomly generates a price and quantity. These values are calculated using a normal distribution, where trade sizes and prices are sized according to trade frequency. i.e An agent that trades frequently will have smaller trade sizes and prices closer to the current price than those that trade less frequently.
 	2. Trend Following Agent - Determine if the nth previous trade is larger or smaller than the current price. Trade accordingly. i.e Sell if the current price is smaller than the previous. 
 	3. Mean Reverting Agent - Calculate the mean of the last n trades then trade accordingly. i.e Sell if the current price is larger than the mean of the last n trades.
 
