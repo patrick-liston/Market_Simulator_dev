@@ -26,7 +26,7 @@ The simulator is an Agent Based Discrete Event Simulator, in which a set a of ag
 	3. Mean Reverting Agent - Calculate the mean of the last n trades then trade accordingly. i.e Sell if the current price is larger than the mean of the last n trades.
 
 ### MARKET ORDER SIMULATOR
-This simulator only considers market orders. It assumes a very thing orderbook, where each quantity or unit, causes the price to move 1 price increment. i.e  +3 Amont = +3 Price.
+This simulator only considers market orders. It assumes a very thin orderbook, where each quantity or unit, causes the price to move 1 price increment. i.e  +3 Amont = +3 Price.
 This is not hugely realistic, however we can see that some typical market patterns emerge. 
 
 
@@ -85,7 +85,7 @@ Folder Structure
     ├── Main_Simulator                  # Main functions for running the market simulation 
     │   ├── Simulator.py         		# Functions to run main simulation. Market Order only
     │   └── Simulator_LOB.py         	# Functions to run main simulation. For Limit Orders
-    ├── Sample Images                   # Images of Previous SImulation - to provide samples 
+    ├── Sample Images                   # Images of Previous Simulation - to provide samples 
     │   └── ....         				# Various images
     ├── utils                   		# Some helper functions.
     │   └── utils.py         			# Functions to help. i.e Get current path, Converting times, create historical prices
