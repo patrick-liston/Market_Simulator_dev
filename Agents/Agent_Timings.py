@@ -2,7 +2,6 @@
 These are the times at which an agent is checked - and makes a decision of if/how they will trade.
 '''
 
-from Agents.Agent_Generation import generate_wake_times_quick
 from tqdm import tqdm
 
 
